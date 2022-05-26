@@ -10,7 +10,7 @@
 .navbar{
     display: flex;
     align-items: center;
-    padding: 20px;
+    padding: 0px;
     background:radial-gradient(#fff,#eb8e50);
     background: url("Photos/p4.jpg");
     font-style: #fff;
