@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<style>
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+div {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+body{
+  background-image: url(Bg.jpg);
+  background-size: cover;
+  background-position: center;
+}
+h1{
+  text-align: center;
+  
+}
+h3{
+  text-align: center;
+  margin-bottom: 40px;
+}
+.Main{
+    background-image: url(Photos/bg3.jpg);
+    background-size: cover;
+}
+.Main h1{
+    
+    background-image: url("Photos/p4.jpg");
+    background-size: cover;
+    color: #fff;
+    border-radius: 10px;
+    padding: 5px 5px;
+    
+    
+}
+.Main h3{
+  color: #f2f2f2;
+}
+
+  
+</style>
+<div class="Main">
+<body>
+  <h1>Esport Adda</h1>
+
+<h3>SignUp</h3>
+
+<div class="Main1">
+  <form method="POST" name="google-sheet">
+    <label for="username">Username</label>
+    <input type="text" id="username" name="Username" placeholder="Enter Your Username...." required>
+
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="First Name" placeholder="Enter Your First Name...." required>
+    
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="Last Name" placeholder="Enter Your Last name...."required>
+
+    <label for="Email">Email</label>
+    <input type="text" id="email" name="Email ID" placeholder="Enter Your Email...."required>
+     <br>
+    <label for="lname">Mobile No:</label>
+    <input type="text" id="mobile_no." name="Mobile NO." placeholder="Enter Your mobile No."required>
+
+    <label for="lname">Create Password</label>
+    <br>
+    <input type="text" id="Password" name="Password" placeholder="Enter Your Country...." required>
+
+
+    
+    
+  
+    <input id="sub" type="submit" value="Submit" name="submit">
+  </form>
+</div>
+</div>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyh_FiYK-XMSb6iBgln0Q2uR_Tl5UOOlHLaOOT3s_A-KOd4dgVZbJwYReaVLBObhBP-/exec'
+    const 
+    form = document.forms['google-sheet']
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        
+        //.then(response => alert("You have been registered succesfully..."))
+        .then(response => window.open("http://127.0.0.1:5500/homepagelg.html",{}))
+        
+        .catch(error => console.error('Error!', error.message))
+       
+    })
+    
+     </script>
+</body>
+</html>
