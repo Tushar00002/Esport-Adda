@@ -109,7 +109,7 @@ h3{
       fetch(scriptURL, { method: 'POST', body: new FormData(form)})
         
         //.then(response => alert("You have been registered succesfully..."))
-        .then(response => window.open("http://127.0.0.1:5500/homepagelg.html",{}))
+        .then(response => window.open("/homepagelg.html",{}))
         
         .catch(error => console.error('Error!', error.message))
        
