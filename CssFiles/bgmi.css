@@ -1,0 +1,132 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+
+
+.navbar{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background:radial-gradient(#fff,#eb8e50);
+    background: url("Photos/p4.jpg");
+    font-style: #fff;
+    justify-content: center;
+    position: sticky;
+    top: 0%;
+}
+nav{
+    flex: 1;
+    text-align: right;
+}
+nav ul{
+    display: inline-block;
+    list-style-type: none;
+   
+    
+
+}
+nav ul li{
+    display: inline-block;
+    margin-right: 20px;
+    padding: 0 10px;
+   
+    
+    
+}
+.navbar a{
+    text-decoration: none;
+    color:rgb(251, 251, 250);
+    font-size: 16px;
+    position: relative;
+   
+}
+  
+.navbar a:hover,
+a.active{
+
+    color: rgb(147, 200, 246);
+    transition: 0.3s ease;
+} 
+.navbar a.active::after,
+.navbar a:hover::after{
+    content:"";
+    width: 80%;
+    height: 2px;
+    background: rgb(147, 200, 246);
+    position: absolute;
+    bottom: -4px;
+    left: 3px;
+}
+.banner{
+    
+    background-image: url(Photos/p14.jpg);
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+    height: 60vh;
+    
+    
+}
+.text{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    text-align: center;
+    align-items:center;
+}
+.banner h1{
+    
+    
+    font-size: 80px;
+    
+    padding-top: 50px;
+}
+.content{
+    text-align: center;
+    padding-left: 25px;
+    background-image: url(Photos/bg4.jpg);
+    
+    
+    
+}
+
+.streamer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-right: 20px;
+}
+.streamer1{
+    background-color: rgb(221, 226, 243);
+    
+    width: 23%;
+    min-width: 250px;
+    padding: 10px 12px;
+    border: 1px solid;
+    
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 20px 20px 30px rgb(0,0,0,0.02);
+    margin: 15px 0px;
+    transition: 0.2s ease;
+    
+    
+}
+.streamer1:hover{
+    box-shadow: 20px 20px 30px rgb(0,0,0,0.06);
+}
+.streamer1 img{
+    width: 100%;
+    border-radius: 20px;
+    height: 30vh;
+       
+}
+.content h2{
+    padding: 25px 0px;
+    font-size: 40px;
+}
