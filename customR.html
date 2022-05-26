@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<style>
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+div {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+body{
+  background-image: url(Bg.jpg);
+  background-size: cover;
+  background-position: center;
+}
+h1{
+  text-align: center;
+  
+}
+h3{
+  text-align: center;
+  margin-bottom: 40px;
+}
+.Main{
+    background-image: url(Photos/bg3.jpg);
+    background-size: cover;
+}
+.Main h1{
+    
+    background-image: url("Photos/p4.jpg");
+    background-size: cover;
+    color: #fff;
+    border-radius: 10px;
+    padding: 5px 5px;
+    
+    
+}
+.Main h3{
+  color: #f2f2f2;
+}
+
+  
+</style>
+<div class="Main">
+<body>
+  <h1>Register For Custom Room Here</h1>
+
+<h3>Enter Your Team Details Here</h3>
+
+<div class="Main1">
+  <form method="POST" name="google-sheet">
+    <label for="fname">Team Name</label>
+    <input type="text" id="fname" name="Team Name" placeholder="Your Team name..">
+
+    <label for="lname">P1 Name</label>
+    <input type="text" id="lname" name="P1 Name" placeholder=" Player 1 name..">
+    
+    <label for="lname">P1 BGMI ID</label>
+    <input type="text" id="lname" name="P1 BGMI ID" placeholder="Your Player1 BGMI ID ..">
+
+    <label for="lname">P2 Name</label>
+    <input type="text" id="lname" name="P2 Name" placeholder=" Player 1 name..">
+
+    <label for="lname">P2 BGMI ID</label>
+    <input type="text" id="lname" name="P2 BGMI ID" placeholder="Your Player1 BGMI ID .">
+
+    <label for="lname">P3 Name</label>
+    <input type="text" id="lname" name="P3 Name" placeholder=" Player 1 name..">
+
+    <label for="lname">P3 BGMI ID</label>
+    <input type="text" id="lname" name="P3 BGMI ID" placeholder="Your Player1 BGMI ID .">
+
+    <label for="lname">P4 BGMI ID</label>
+    <input type="text" id="lname" name="P4 Name" placeholder=" Player 1 name..">
+
+    <label for="lname">P4 BGMI ID</label>
+    <input type="text" id="lname" name="P4 BGMI ID" placeholder="Your Player1 BGMI ID..">
+    
+  
+    <input type="submit" value="Submit" name="submit">
+  </form>
+</div>
+</div>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyPUdaBmVuCbvhwga2mbWR7avSJg4a4g0Dm_-XbnLAGC1hzHV-1sx_mTjyekDt9Og_w/exec'
+    const 
+    form = document.forms['google-sheet']
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+</body>
+</html>
